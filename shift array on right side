@@ -1,0 +1,28 @@
+//SHIFT ARRY TO RIGHT......
+#include <iostream>
+using namespace std;
+#define n 5
+int main()
+{
+	// shift array elements to right side...
+	int arr[n],i;
+	int temp;
+	cout<<"ENTER AN ARRAY..."<<endl;
+	for(i=0;i<5;i++)
+	{
+		cin>>arr[i];
+	}
+	
+	temp=arr[n-1];
+   	for(i=n-1;i>0;i--)
+	{
+	arr[i]=arr[i-1];
+	arr[0]=temp;
+	}
+	
+	cout<<" ARRAY AFTER RIGHT SHIFT..."<<endl;
+	for(i=0;i<5;i++)
+	{
+		cout<<arr[i]<<"\t";
+	}
+}
