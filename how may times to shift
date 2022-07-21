@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+#define n 5
+int main()
+{
+	// number of shift array elements to the side that user ask...
+	int arr[n],i;
+	int temp;
+	int dir,pos;
+	
+	cout<<"ENTER AN ARRAY..."<<endl;
+	for(i=0;i<5;i++)
+	{
+		cin>>arr[i];
+	}
+	
+	cout<<"ENTER HOW MANY TIME STO SHIFT....: ";
+	cin>>pos;
+	
+	cout<<"ENTER DIRCTION OF SHIFT...:        (ENTER 1 FOR LEFT AND 0 FOR RIGHT)"<<endl;
+	cin>>dir;
+	while(pos>0)
+	{
+			if(dir==0)
+	{
+	temp=arr[n-1];
+   	for(i=n-1;i>0;i--)
+	{
+	arr[i]=arr[i-1];
+	arr[0]=temp;
+	}	
+		
+	cout<<" ARRAY AFTER right SHIFT..."<<endl;
+	for(i=0;i<5;i++)
+	{
+		cout<<arr[i]<<"\t";
+	}
+	}
+	
+	if(dir==1)
+	{
+		temp=arr[0];
+   	for(i=0;i<n;i++)
+	{
+	arr[i]=arr[i+1];
+	arr[n-1]=temp;
+	}
+		
+	cout<<" ARRAY AFTER left SHIFT..."<<endl;
+	for(i=0;i<5;i++)
+	{
+		cout<<arr[i]<<"\t";
+	}
+	}
+	pos--;
+	}
+
+}
