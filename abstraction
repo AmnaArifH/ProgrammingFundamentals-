@@ -1,1 +1,17 @@
+#include <iostream>
+using namespace std;
+class smartPhone
+{
+	public:
+		virtual void takeSelfie()=0;
+};
 
+class android::public smartPhone
+{
+	
+};
+int main()
+{
+	smartPhone*s1=new android();
+	
+}
